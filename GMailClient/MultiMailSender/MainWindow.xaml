@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MultiMailSender"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Multi Email Sender" Height="640" Width="540" ResizeMode="CanMinimize">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Row 1: Recepients container -->
+        <Label Grid.Row="1" Grid.Column="0">To:</Label>
+        <TextBox x:Name="TextBox_ToFile" Grid.Row="1" Grid.Column="1" IsReadOnly="True"/>
+        <Button x:Name="Button_RecepientFileBrowse" Grid.Row="1" Grid.Column="2">Choose File</Button>
         
+        <!-- Row 2: Helper Controls -->
+        <WrapPanel Grid.Row="2" Grid.Column="1">
+            <Button x:Name="Button_InitiateSession">Initiate Session</Button>
+            <Button x:Name="Button_ClearSession">Clear Session</Button>
+            <Button x:Name="Button_DisplayToFileContents">Display Recepients</Button>
+        </WrapPanel>
+        
+        <!-- Row 3: Email Body -->
+        <Label Grid.Row="3" Grid.Column="0">Body</Label>
+        <TextBox x:Name="TextBox_Body" Grid.Row="3" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="WrapWithOverflow" AcceptsReturn="True"/>
+        
+        <!-- Row 4: Attachement -->
+        <Label Grid.Row="4" Grid.Column="0">Attachement:</Label>
+        <TextBox x:Name="TextBox_Attachement" Grid.Row="4" Grid.Column="1" IsReadOnly="True"/>
+        <Button x:Name="Button_Attachement" Grid.Row="4" Grid.Column="2">Choose File</Button>
+        
+        <!-- Row 5: Send Control -->
+        <Button x:Name="Button_Send" Grid.Row="5" Grid.Column="2">Start Sending</Button>
+        
+        <!-- Row 6: Progress -->
+        <Grid Grid.Row="6" Grid.ColumnSpan="3">
+            <ProgressBar x:Name="ProgressBar_PercentSent" Minimum="0" Maximum="100" Value="0"/>
+            <TextBlock Text="{Binding ElementName=pg_Export, Path=Value, StringFormat={}{0:0}%}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
     </Grid>
 </Window>

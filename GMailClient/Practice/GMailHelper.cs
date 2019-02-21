@@ -22,7 +22,7 @@ namespace Practice
             UserCredential credential;
 
             using (var stream =
-                new FileStream(@"Data\credentials.json", FileMode.Open, FileAccess.Read))
+                new FileStream(@"Data\credentials2.json", FileMode.Open, FileAccess.Read))
             {
                 // The file token.json stores the user's access and refresh tokens, and is created
                 // automatically when the authorization flow completes for the first time.
