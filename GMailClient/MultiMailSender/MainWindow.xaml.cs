@@ -34,6 +34,7 @@ namespace MultiMailSender
         private OpenFileDialog _recepientsFileDialog;
         private OpenFileDialog _attachementFileDialog;
         private GmailService _gmailService;
+        bool _emailSendingInProgress;
 
         public MainWindow()
         {
@@ -82,6 +83,7 @@ namespace MultiMailSender
             var subject = TextBox_Subject.Text;
             var body = TextBox_Body.Text;
             var attachement = TextBox_Attachement.Text;
+            Button_Send.IsEnabled = false;
             foreach (var recepient in _recepients)
             {
                 try
@@ -94,6 +96,8 @@ namespace MultiMailSender
                     errors.Add(ex);
                 }
             }
+
+            Button_Send.IsEnabled = true;
 
             if (errors.Count == 0)
             {
