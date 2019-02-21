@@ -1,0 +1,78 @@
+<Expander x:Name="Expander_SmartGroup" Header="Smart Group Jobs">
+                                <StackPanel>
+                                    <!--<StackPanel HorizontalAlignment="Center">
+                                        <WrapPanel Margin="0 0 0 10">
+                                            <TextBlock Width="200" FontWeight="Bold">
+                                    Select All
+                                            </TextBlock>
+                                            <CheckBox x:Name="Cb_Export_SelectAll" Checked="Cb_Export_StateChanged" Unchecked="Cb_Export_StateChanged"></CheckBox>
+                                        </WrapPanel>
+                                    </StackPanel>-->
+                                    <StackPanel HorizontalAlignment="Center" x:Name="Sp_TaskNameRows">
+                                        <!-- Content added dynamically -->
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander>
+<Expander x:Name="Expander_Syncronize" Header="Syncronize Jobs">
+                                <StackPanel>
+                                    <StackPanel HorizontalAlignment="Center" x:Name="Sp_TaskNameRowsExport_Syncronize">
+                                        <!-- Content added dynamically -->
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander>
+                            <Expander x:Name="Expander_Reporting" Header="Reporting Jobs">
+                                <StackPanel>
+                                    <StackPanel HorizontalAlignment="Center" x:Name="Sp_TaskNameRowsExport_Reporting">
+                                        <!-- Content added dynamically -->
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander>
+                            <Expander x:Name="Expander_GLM" Header="Group Life Cycle Management (GLM) Jobs">
+                                <StackPanel>
+                                    <StackPanel HorizontalAlignment="Center" x:Name="Sp_TaskNameRowsExport_GLM">
+                                        <!-- Content added dynamically -->
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander>
+                            <Expander x:Name="Expander_MembershipLifecycle" Header="Membership Lifecycle Jobs">
+                                <StackPanel>
+                                    <StackPanel HorizontalAlignment="Center" x:Name="Sp_TaskNameRowsExport_MembershipLifecycle">
+                                        <!-- Content added dynamically -->
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander>
+                            <Expander x:Name="Expander_SchemaReplication" Header="Schema Replication Jobs">
+                                <StackPanel>
+                                    <StackPanel HorizontalAlignment="Center" x:Name="Sp_TaskNameRowsExport_SchemaReplication">
+                                        <!-- Content added dynamically -->
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander>
+                            <Expander x:Name="Expander_GUS" Header="GUS Jobs">
+                                <StackPanel>
+                                    <StackPanel HorizontalAlignment="Center" x:Name="Sp_TaskNameRowsExport_GUS">
+                                        <!-- Content added dynamically -->
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander>
+                            <Expander x:Name="Expander_HistoryRetention" Header="History Retention Jobs">
+                                <StackPanel>
+                                    <StackPanel HorizontalAlignment="Center" x:Name="Sp_TaskNameRowsExport_HistoryRetention">
+                                        <!-- Content added dynamically -->
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander>
+                            <Expander x:Name="Expander_UserLifeCycle" Header="User Life Cycle Jobs">
+                                <StackPanel>
+                                    <StackPanel HorizontalAlignment="Center" x:Name="Sp_TaskNameRowsExport_UserLifeCycle">
+                                        <!-- Content added dynamically -->
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander>
+                            <Expander x:Name="Expander_OrphanGroupUpdater" Header="Orphan Group Updater Jobs">
+                                <StackPanel>
+                                    <StackPanel HorizontalAlignment="Center" x:Name="Sp_TaskNameRowsExport_OrphanGroupUpdater">
+                                        <!-- Content added dynamically -->
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander>

@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice", "Practice\Practice.csproj", "{EAD0B00C-67CC-4E62-AD93-1CD58B6CA41C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMailSender", "MultiMailSender\MultiMailSender.csproj", "{B048B5CD-A5D2-45E0-B3C3-F4C95534B7D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EAD0B00C-67CC-4E62-AD93-1CD58B6CA41C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAD0B00C-67CC-4E62-AD93-1CD58B6CA41C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAD0B00C-67CC-4E62-AD93-1CD58B6CA41C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B048B5CD-A5D2-45E0-B3C3-F4C95534B7D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B048B5CD-A5D2-45E0-B3C3-F4C95534B7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B048B5CD-A5D2-45E0-B3C3-F4C95534B7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B048B5CD-A5D2-45E0-B3C3-F4C95534B7D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

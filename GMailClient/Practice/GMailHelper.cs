@@ -10,6 +10,8 @@ using Google.Apis.Gmail.v1;
 using Google.Apis.Gmail.v1.Data;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
+using System.Net.Mail;
+using MimeKit;
 
 namespace Practice
 {
@@ -63,6 +65,42 @@ namespace Practice
             UsersResource.DraftsResource.GetRequest request = service.Users.Drafts.Get("me", draftId);
             var draft = request.Execute();
             return draft;
+        }
+
+        public static Message SendEmail(GmailService service)
+        {
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress("apitesting656@gmail.com"),
+                Subject = "Testing message",
+                Body = "This is <b>Body</b> of the message. This message was sent from .NET as <em>testing</em>.",
+                IsBodyHtml = true
+            };
+            mailMessage.To.Add(new MailAddress("ars.ahm6@gmail.com"));
+            mailMessage.Attachments.Add(new Attachment("sample.txt"));
+
+            var mimeMsg = MimeMessage.CreateFromMailMessage(mailMessage);
+            var encodedMsg = mimeMsg.ToString();
+            var rawMsg = Base64UrlEncode(encodedMsg);
+
+            var gmailMessage = new Message()
+            {
+                Raw = rawMsg
+            };
+
+            var request = service.Users.Messages.Send(gmailMessage, "me");
+            var result = request.Execute();
+
+            return result;
+        }
+
+        private static string Base64UrlEncode(string input)
+        {
+            var inputBytes = Encoding.UTF8.GetBytes(input);
+            return Convert.ToBase64String(inputBytes)
+              .Replace('+', '-')
+              .Replace('/', '_')
+              .Replace("=", "");
         }
     }
 }

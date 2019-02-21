@@ -17,7 +17,7 @@ namespace Practice
     {
         // If modifying these scopes, delete your previously saved credentials
         // at ~/.credentials/gmail-dotnet-quickstart.json
-        static string[] _scopes = { GmailService.Scope.GmailReadonly };
+        static string[] _scopes = { GmailService.Scope.GmailReadonly, GmailService.Scope.GmailCompose, GmailService.Scope.GmailSend, GmailService.Scope.GmailModify };
         static string _applicationName = "Gmail API .NET Quickstart";
 
         static void Main(string[] args)
@@ -28,7 +28,9 @@ namespace Practice
             PrintLabels(labels);
 
             var drafts = GMailHelper.GetDrafts(service);
-            var draft = GMailHelper.GetDraft(service, "r-3167230408123907724");
+            var draft = GMailHelper.GetDraft(service, "r5697319840083563175");
+
+            var result = GMailHelper.SendEmail(service);
             
         }
 
